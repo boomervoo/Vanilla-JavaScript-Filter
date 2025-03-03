@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>filter</title>
+    <script defer src="./filter.js"></script>
+    <script src="https://unpkg.com/[email protected]/dist/vue.global.prod.js"></script>
+    <style>
+        body {
+            background-color: #cecece;
+        }
+
+        .contain {
+            display: flex;
+            gap: 40px
+        }
+
+        .cards {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            width: 100%;
+        }
+
+        .card {
+            width: calc((100% / 2) - 25px );
+            height: 250px;
+            box-shadow: 10px;
+            background-color: aqua;
+        }
+
+        .card__title {
+            padding: 25px;
+            font-weight: 700;
+            font-size: 20px;
+        }
+
+        .filters {
+            display: flex;
+            flex-direction: column;
+            width: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    
+    <div class="contain">
+        <div id="filter">
+            <div class="filters" id="filter-works">
+                <span><b>Рабочая среда</b></span>
+            </div>
+            <div class="filters" id="filter-temperature">
+                <span><b>Диапазон рабочих температур</b></span>     
+            </div>
+           
+            <div class="filters" id="filter-materials">
+                <span><b>Материал</b></span>
+            </div>
+            <div class="filters" id="filter-size">
+                <span><b>Внешний диаметр</b></span>
+            </div>
+            <div class="filters" id="filter-color">
+                <span><b>Цвет</b></span>
+            </div>
+        </div>
+        <div id="block" class="cards">
+        
+        </div>
+        <button onclick="removeFilters()">Очистить фильтры</button>
+    </div>
+
+</body>
+
+</html>
